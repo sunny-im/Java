@@ -1,0 +1,87 @@
+(admin table 생성)
+create table admin(
+	admin_id number primary key
+	,id varchar(20)
+	,pass varchar(20)
+	,name varchar(2)
+	,email varchar(30)
+	);
+
+(admin 시퀀스 생성)
+create sequence seq_admin
+increment by1
+start with 1
+;
+
+(Top Category)
+create table topcategory(
+	topcategory_id number primary key
+	,name varchar(25)
+);
+
+create table subcategory(
+	subcategory_id number primary key
+	,topcategory_id number
+	,name varchar(25)
+	,constraint fk_topcategory_subcategory foreign key(topcategory_id) 
+		references topcategory(topcategory_id)
+);
+
+create table book(
+	book_id number primary key
+	,subcategory_id number
+	,name varchar(50)
+	,price number default 0
+	,book_img varchar(3)
+	,constraint fk_subcategory_book foreign key(subcategory_id) references subcategory(subcategory_id)
+);
+
+create sequence seq_topcategory
+increment by 1
+start with 1;
+
+create sequence seq_subcategory
+increment by 1
+start with 1;
+
+create sequence seq_book
+increment by 1
+start with 1;
+
+insert into topcategory(topcategory_id, name) values(seq_topcategory.nextval, '국내도서');
+insert into topcategory(topcategory_id, name) values(seq_topcategory.nextval, '외국도서');
+insert into topcategory(topcategory_id, name) values(seq_topcategory.nextval, 'ebook');
+
+insert into subcategory(subcategory_id, topcategory_id, name) values(seq_subcategory.nextval,1 ,'컴퓨터');
+insert into subcategory(subcategory_id, topcategory_id, name) values(seq_subcategory.nextval,1 ,'소설');
+insert into subcategory(subcategory_id, topcategory_id, name) values(seq_subcategory.nextval,1 ,'수필');
+insert into subcategory(subcategory_id, topcategory_id, name) values(seq_subcategory.nextval,1 ,'개발서');
+
+insert into subcategory(subcategory_id, topcategory_id, name) values(seq_subcategory.nextval,2 ,'자서전');
+insert into subcategory(subcategory_id, topcategory_id, name) values(seq_subcategory.nextval,2 ,'논문');
+insert into subcategory(subcategory_id, topcategory_id, name) values(seq_subcategory.nextval,2 ,'교과서');
+insert into subcategory(subcategory_id, topcategory_id, name) values(seq_subcategory.nextval,2 ,'잡지');
+
+insert into subcategory(subcategory_id, topcategory_id, name) values(seq_subcategory.nextval,3 ,'프로그래밍');
+insert into subcategory(subcategory_id, topcategory_id, name) values(seq_subcategory.nextval,3 ,'만화책');
+
+commit;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
