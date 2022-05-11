@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class price {
+public class menu {
     public static void main(String[] args) {
         System.out.println("메뉴 번호를 입력하세요");
         System.out.println("1. 치킨");
