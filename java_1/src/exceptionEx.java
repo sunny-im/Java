@@ -12,6 +12,6 @@ public class exceptionEx {
             System.out.println("환전 금액은 " + exchange / rate + " 달러 입니다.");
         } catch (Exception e) {
             System.out.println("숫자만 입력해 주세욤 !");
-        }
+        } 
     }
 }
