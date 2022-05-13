@@ -46,6 +46,6 @@ public class forWhileEx {
         while (inputPw2.equals(pw2) != true); {
         }
         System.out.println("비밀번호가 일치합니다.");
-
+ 
     }
 }
