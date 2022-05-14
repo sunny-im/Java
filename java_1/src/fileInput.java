@@ -12,10 +12,12 @@ public class fileInput {
             e.printStackTrace();
         }
 
-        Scanner sc = new Scanner(System.in);
-        String line = sc.nextLine();
-        System.out.println(line);
-        String line2 = sc.nextLine();
-        System.out.println(line2);
+        Scanner sc = new Scanner(inputStream);
+
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+            System.out.println(line);
+        }
+
     }
 }
