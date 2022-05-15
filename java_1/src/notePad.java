@@ -11,7 +11,7 @@ public class notePad {
         while(true) {
             System.out.println("원하는 작업 번호를 입력해주세요");
             System.out.println("1. 메모읽기");
-            System.out.println("2. 새 메모");
+            System.out.println("2. 새 메모작성");
             System.out.println("3. 종료");
 
             int num;
