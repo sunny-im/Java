@@ -49,7 +49,7 @@ public class notePad {
             else if (num == 2) {
                 System.out.println("저장할 메모 파일명을 입력하세요");
                 String fileName = sc.nextLine();
-                FileWriter writer = null; 
+                FileWriter writer = null;
 
                 try {
                     writer = new FileWriter(fileName);
