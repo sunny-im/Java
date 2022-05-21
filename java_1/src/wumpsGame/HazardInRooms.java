@@ -56,7 +56,7 @@ public class HazardInRooms {
 
             int roomNumber = sc.nextInt();
 
-            currentRoom = roomNumber;  
+            currentRoom = roomNumber;
         }
     }
 }
