@@ -83,6 +83,7 @@ public class MoveAndSituation {
                 }
             }
             move(currentRoom);
+            
         }
     }
 }
